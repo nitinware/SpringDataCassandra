@@ -21,6 +21,7 @@ public class Main {
 		CassandraOperations cassandraOperations = context.getBean("cqlTemplate", CassandraOperations.class);
 		
 		PersonRepository personRepo = context.getBean(PersonRepository.class);
+		//PersonRepository personRepo = (PersonRepository)context.getBean("personRepository");
 		
 		Iterator<Person> personIterator = personRepo.findAll().iterator();
 		
