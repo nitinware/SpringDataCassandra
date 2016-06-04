@@ -20,14 +20,14 @@
   <cassandra:session keyspace-name="${cassandra.keyspace}" />
 
   <!-- REQUIRED: The Default Cassandra Mapping Context used by CassandraConverter -->
-  <cassandra:mapping />
+  <cassandra:mapping entity-base-packages="com.springdata.example.model" />
 
   <!-- REQUIRED: The Default Cassandra Converter used by CassandraTemplate -->
   <cassandra:converter />
 
   <!-- REQUIRED: The Cassandra Template is the building block of all Spring 
     Data Cassandra -->
-  <cassandra:template id="cassandraTemplate" />
+  <cassandra:template id="cqlTemplate" />
 
   <!-- OPTIONAL: If you are using Spring Data Cassandra Repositories, add 
     your base packages to scan here -->
